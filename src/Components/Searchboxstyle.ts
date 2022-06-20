@@ -51,7 +51,7 @@ export const Searchbox = styled.div`
                     transition: all .6s ease;
                 }
                 .lens {
-                    top: 13.5px;
+                    top: 12.5px;
                     left: 15px;
                     transform: translate(0, 0);
                     fill: var(--primary-color);
@@ -106,8 +106,8 @@ export const Searchbox = styled.div`
         width: 16px;
         height: 16px;
         z-index: 2;
-        top: 13px;
-        left: 13px;
+        top: 10px;
+        left: 12.5px;
         transition: top .3s ease, left .3s ease, fill .2s ease .2s;
     }
 

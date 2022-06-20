@@ -4,17 +4,17 @@ export const Container = styled.div`
     background-color: #1E2D34;
     width: 100%;
     height: 100vh;
-    padding: 0 40px;
 `;
 
 export const PopularWrapper = styled.div`
-    
+    margin: 0 40px;
 `
 export const PopularMovies = styled.div`
 
 `
 
 export const MoviesList = styled.ul`
+
     margin: 0 20px;
     color: #fff;
 

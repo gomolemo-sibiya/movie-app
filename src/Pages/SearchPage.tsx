@@ -6,7 +6,8 @@ import api_key from "../config/api_keys";
 import {
     Container,
     Wrapper,
-    AsideRight
+    Right,
+    Top
 } from './Style/searchstyle';
 
 export const SearchPage= () => {
@@ -24,12 +25,15 @@ export const SearchPage= () => {
     return (
         <Container>
             <Wrapper>
-                Results: <span>{searchData?.total_results}</span>
-                <AsideRight>
+                <Top>
+                    {searchData?.total_results} 
+                    <span>movies</span>
+                </Top>
+                <Right>
                     {searchData?.results.map((item, index) => (
                         <SearchResults key={index} data={item}/>
                     ))}
-                </AsideRight>
+                </Right>
             </Wrapper>
         </Container>
     );

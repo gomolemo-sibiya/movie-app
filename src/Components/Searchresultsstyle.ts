@@ -1,56 +1,41 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-display: flex;
-  gap: 25px;
-  background-color: white;
-  border: 1px solid rgba(1, 1, 1, 0.1);
-  border-radius: 10px;
-  box-shadow: 1px 4px 8px 1px rgba(1, 1, 1, 0.1);
-  width: 80%;
-  padding: 10px;
-  transition: all 0.4s ease;
-  cursor: pointer;
-
-  &:hover {
-    filter: brightness(0.9);
-    box-shadow: 1px 4px 8px 1px rgba(1, 1, 1, 0.3);
-  }
-
-  @media (max-width: 500px) {
-    width: 380px;
-    margin: 0 25px;
-  }
+    display: flex;
+    margin-top: 1.5rem;
+    flex-direction: column;
+    border-radius: 6px;
+    width: 250px;
+    
 `;
 
 export const MovieImage = styled.div`
-display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    border-radius: 5px;
-  }
-
-  @media (max-width: 500px) {
-    height: 100%;
-  }
+    img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 15px;
+    }
 `;
 
 export const MovieDescription = styled.div`
-h1 {
-    margin-top: 10px;
-    width: 100%;
-    margin-bottom: 5px;
-  }
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 10px 10px;
+    display: block;
+    padding: 0;
+    margin: 0;
 
-  span {
-    color: #999;
-  }
-
-  p {
-    margin-top: 15px;
-    font-size: 16px;
-  }
+    h1 {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0;
+        color: #F7F7F7;
+    }
+    span {
+        color: #117360;
+        font-weight: 500;
+    }
 `;

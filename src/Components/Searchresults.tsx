@@ -11,6 +11,7 @@ interface Data {
 }
   
 export const SearchResults = ({data}: Data) => {
+    const fromDb = undefined;
     const navigate = useNavigate();
     return(
     <div>
@@ -26,7 +27,7 @@ export const SearchResults = ({data}: Data) => {
                 <MovieDescription>
                     <h1>{data.title}</h1>
                     <span>{data.release_date}</span>
-                    <p>{data.overview.slice(0, 650)}</p>
+                    {/* <p>{data.overview.slice(0, 650)}</p> */}
                 </MovieDescription>
             </Card>
         )}

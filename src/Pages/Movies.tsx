@@ -7,7 +7,9 @@ import {
     Container,
     Wrapper,
     Left,
-    Right
+    Right,
+    CastContainer,
+    MovieContainer
 } from './Style/styled'
 export const Movies = () => {
     const [movieData, setMovieData] = useState<MovieData>();
@@ -34,16 +36,31 @@ export const Movies = () => {
     return (
         <Container>
             <Wrapper>
-                <Left backImage={`${url}${movieData?.poster_path}`}/>
-                <Right>
-                    <h1>{movieData.title}</h1>
-                    <span>
-                        {movieData.overview}
-                    </span>
-                    <div>
-                        <Rating name="read-only" value={5} readOnly />
-                    </div>
-                </Right>
+                <MovieContainer>
+                    <Left backImage={`${url}${movieData?.poster_path}`}/>
+                    <Right>
+                        <div>
+                            <h1>{movieData.title}</h1>
+                            <Rating 
+                                name="read-only" 
+                                value={5}
+                                readOnly
+                                color="#5DC98D"
+                                style = {{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    alignItems: 'center',
+                                }}
+                            />
+                        </div>
+                        <span className="overview">
+                            {movieData.overview}
+                        </span>
+                    </Right>
+                </MovieContainer>
+                <CastContainer>
+
+                </CastContainer>
             </Wrapper>
         </Container>
     );

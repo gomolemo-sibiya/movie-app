@@ -74,6 +74,7 @@ export const IconContainer = styled.div`
     justify-content: center;
     align-items: center;
     bottom: 30px;
+    top: 90;
 `;
 
 
