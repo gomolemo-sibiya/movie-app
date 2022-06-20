@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import api_keys from "../config/api_keys";
-
 import { Movies } from "../Typings/MoviesType";
 
 export const useFetchMovies = (url: string, language: string) => {

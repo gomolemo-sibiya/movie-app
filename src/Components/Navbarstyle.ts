@@ -26,20 +26,20 @@ export const NavLinks = styled.ul`
     display: flex;
     list-style: none;
     padding: 0 0 0 5px;
-
+    font-weight: 600;
     li {
-        list-style: none;
-        padding: 0 0 0 5px; 
+        list-style: none; 
     }
 
     li a {
-        color: #fff;
+        color: #117360;
         font-size: 18px;
         text-decoration: none;
+        padding-right: 10px
     }
 
     li a:hover {
-        color: #ff3d00;
+        color: #F7F7F7;
     }
 `;
 

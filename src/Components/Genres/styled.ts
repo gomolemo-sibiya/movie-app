@@ -13,14 +13,41 @@ export const Title = styled.div`
 `;
 
 export const MovieCard = styled.li`
-    width: 20%;
-    scroll-snap-align: start;
-    &:hover { 
-        width: 20%;
-        margin: 0 40px;
+object-fit: contain;
+width: 600px;
+margin: 10px;
+gap: 20px;
+
+
+img {
+    height: 280px;
+    width: 300px;
+}
+
+:hover {
+    transition: transform 450ms;
+    transform: scale(1.09);
+}
+
+    @media (max-width: 858px) {
+        height: 300px;
+        width: 600px;
+
+        img {
+            height: 280px;
+            width: 300px;
+        }
     }
 
-    
+    @media (max-width: 458px) {
+        height: 300px;
+        width: 600px;
+
+        img {
+            height: 280px;
+            width: 300px;
+        }
+    }
 `;
 
 

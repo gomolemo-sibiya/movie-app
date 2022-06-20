@@ -21,10 +21,10 @@ export const Navbar = () => {
                         <a href='/'>Home</a>
                     </li>
                     <li>
-                        <a href='#genres'>Home</a>
+                        <a href='#genres' style={{color:'#F7F7F7'}}>Genre</a>
                     </li>
                 </NavLinks>
-                <FaAtlassian  color={'#1e6d5e'} size={24}/>
+                <FaAtlassian  color={'#117360'} size={30}/>
                 <SearchboxInput func={handleSearchMovie} isRef={inputRef}/>
             </NavWrapper>
         </div>

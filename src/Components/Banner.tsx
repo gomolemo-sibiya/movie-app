@@ -1,12 +1,14 @@
 import {useEffect, useState} from 'react';
 import { BigImage } from '../Typings/BannerType';
+import { BsChevronBarExpand } from 'react-icons/bs';
 import { 
     Container,
     Image,
     Overlay,
     InfoContainer,
     ButtonContainer,
-    StyledButton
+    StyledButton,
+    IconContainer
 } from "./Bannerstyle";
 
 interface Props{
@@ -30,10 +32,10 @@ export const Banner = ({image}:Props) => {
                 <Image src={`https://image.tmdb.org/t/p/original/${banner?.poster_path}`} alt="Hero" />
                 <Overlay/>
                 <InfoContainer>
-                    <h1 >
+                    <h1 style={{fontSize : '40px', color: '#F7F7F7', margin: '0'}}>
                         {banner?.title || banner?.name || banner?.original_name}
                     </h1>
-                    <p>
+                    <p style={{fontSize : '20px', color: '#EDEDED'}}>
                         {banner?.overview}
                     </p>
                     <ButtonContainer>
