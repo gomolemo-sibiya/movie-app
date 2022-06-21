@@ -55,3 +55,4 @@ export interface GenreCard {
     title: string;
     titleCategory?: string;
 }
+

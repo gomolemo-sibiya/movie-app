@@ -1,17 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { MovieData } from "../../Typings/MoviesType";
+
 import { 
     MovieCard,
-    Title
 } from "./styled"
-
-interface Props {
-    actionMovies: MovieData[]
-    comedyMovies: MovieData[]
-    documentaries: MovieData[]
-    horrorMovies: MovieData[]
-    romanceMovies: MovieData[]
-}
 
 type MovieProps = {
     title: string;
@@ -25,7 +16,7 @@ export const PopularMovies = ({ title, url, id }: MovieProps) => {
     return title && url && id ?(
         <MovieCard onClick={() => navigate(`/movie/${id}`)}>
             <img src={`https://image.tmdb.org/t/p/w500/${url}`} alt="" />
-            <h1>{title}</h1>
+            <h1 className="title">{title}</h1>
         </MovieCard>
     ):(
         <MovieCard>Loading</MovieCard>

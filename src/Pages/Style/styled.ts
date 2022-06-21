@@ -55,7 +55,7 @@ export const Right = styled.div`
 
   div {
     display: flex;
-    lex-direction: row;
+    flex-direction: row;
     justify-content: space-between;
     padding-top: 30px;
     gap: 40px;

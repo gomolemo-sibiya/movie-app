@@ -5,6 +5,7 @@ import api_key from '../config/api_keys';
 import { BigImage } from '../Typings/BannerType';
 import { useFetchMovies } from '../Hooks/useFetchMovies';
 import { Action } from '../Components/Genres/Action';
+import { useAutoCarrousel } from '../Hooks/useAutoCarrousel';
 
 export const Home = () => {
     const [topRatesMovies, setTopRatesMovies] = useState<BigImage[]>([]);
@@ -50,6 +51,8 @@ export const Home = () => {
         getTopRateMovies();
     }, []);
     
+    useAutoCarrousel(fetchPopularMovies.movies, 2000, popularCardRef);
+
     return (
         <div>
             <Banner image={topRatesMovies}/>

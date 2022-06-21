@@ -27,7 +27,7 @@ export const SearchPage= () => {
             <Wrapper>
                 <Top>
                     {searchData?.total_results} 
-                    <span>movies</span>
+                    <span>results</span>
                 </Top>
                 <Right>
                     {searchData?.results.map((item, index) => (

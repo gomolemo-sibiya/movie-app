@@ -11,7 +11,6 @@ interface Data {
 }
   
 export const SearchResults = ({data}: Data) => {
-    const fromDb = undefined;
     const navigate = useNavigate();
     return(
     <div>

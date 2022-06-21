@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import api_key from "../config/api_keys";
 import { MovieData } from '../Typings/MoviesType';
 import Rating from '@mui/material/Rating';
+import { Actors } from "../Components/Actors";
+import { Cast } from '../Typings/ActorsType';
+
 import {
     Container,
     Wrapper,
@@ -13,6 +16,7 @@ import {
 } from './Style/styled'
 export const Movies = () => {
     const [movieData, setMovieData] = useState<MovieData>();
+    const [cast, setCast] = useState<Cast[]>([]);
     const url = 'https://image.tmdb.org/t/p/w500/';
     const params = useParams();
 
@@ -24,6 +28,16 @@ export const Movies = () => {
             .then((res) => res.json())
             .then((data) => setMovieData(data));
     }, [params.slug]);
+
+    useEffect(() => {
+        if(movieData){
+            fetch(
+                `https://api.themoviedb.org/3/movie/${params.slug}/credits?api_key=${api_key}&language=pt-BR`
+            )
+            .then((res) => res.json())
+            .then((data) => setCast(data.cast));
+        }
+    });
 
     if (!movieData) {
         return (
@@ -59,7 +73,10 @@ export const Movies = () => {
                     </Right>
                 </MovieContainer>
                 <CastContainer>
-
+                    <Actors 
+                        cast={cast} 
+                        url={"https://image.tmdb.org/t/p/w500/"}
+                    />
                 </CastContainer>
             </Wrapper>
         </Container>
